@@ -7,15 +7,28 @@ public class MovieRatingAnalyzer {
         ArrayList<Double> ratings = new ArrayList<>();
 
         // TODO 1: Add the sample movie data here (at least 8 movies)
+
+        movieTitles.add("Fast & Furious");  ratings.add(8.8);
+        movieTitles.add("Callout");         ratings.add(7.8);
+        movieTitles.add("Be Great");        ratings.add(8.0);
+        movieTitles.add("Red");             ratings.add(8.8);
+        movieTitles.add("Bad land");        ratings.add(8.8);
+        movieTitles.add("Spider Man");      ratings.add(8.8);
+        movieTitles.add("Superman");        ratings.add(8.8);
+        movieTitles.add("Kea & Thato");     ratings.add(8.8);
         // Example:
         // movieTitles.add("Inception");
         // ratings.add(8.8);
+
 
         System.out.println("=== MOVIE RATING ANALYZER ===\n");
 
         // TODO 2: Call the methods in this order:
         // 1. printAllMovies
+        printAllMovies(movieTitles, ratings);
         // 2. Print average rating (use calculateAverageRating)
+        System.out.println();
+        System.out.println("Average Rating: " + calculateAverageRating(ratings));
         // 3. Print number of highly rated movies (use countHighlyRated)
         // 4. printRatingCategories
         // 5. findHighestAndLowestRated
@@ -27,7 +40,8 @@ public class MovieRatingAnalyzer {
      * Format: "1. Inception - 8.8"
      */
     public static void printAllMovies(ArrayList<String> titles, ArrayList<Double> ratings) {
-        // Your code here
+        // for i in range(0, len(titles)
+        for (int i = 0; i < titles.size()  ; i++) System.out.println((i + 1) + ". " + titles.get(i) + " - " + ratings.get(i));
     }
 
     /**
@@ -37,7 +51,9 @@ public class MovieRatingAnalyzer {
      */
     public static double calculateAverageRating(ArrayList<Double> ratings) {
         // Your code here - return the average
-        return 0.0;
+        double total = 0;
+        for (int i = 0; i < ratings.size(); i++)  total += ratings.get(i);
+        return total/ ratings.size();
     }
 
     /**
@@ -47,6 +63,7 @@ public class MovieRatingAnalyzer {
      */
     public static int countHighlyRated(ArrayList<Double> ratings) {
         // Your code here - return the count
+
         return 0;
     }
 
